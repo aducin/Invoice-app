@@ -1,0 +1,49 @@
+.amountContainer {
+    position: relative;
+    text-align: center;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.iconDelete {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.iconDelete:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 769px) {
+    .icon {
+        position: absolute;
+    }
+
+    .iconLeft {
+        left: 20%;
+    }
+    
+    .iconRight {
+        left: 80%;
+    }
+}
+
+@media (min-width: 769px) {
+    .icon {
+        position: relative;
+    }
+
+    .iconLeft {
+        left: 0.3em;
+        top: 0.3em;
+    }
+    
+    .iconRight {
+        position: absolute;
+        left: 85%;
+        top: 0.85em;
+    }
+}

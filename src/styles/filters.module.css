@@ -1,0 +1,57 @@
+.amountContainer {
+    margin-top: 1em;
+}
+
+.container {
+    background: #FDFAFA;
+    border: 1px solid #EFEFEF;
+    border-radius: 0.5em;
+    margin-top: 3em;
+    padding: 2em;
+}
+
+.icon {
+    position: absolute;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.iconContainer {
+    position: relative;
+}
+
+.iconLeft {
+    top: 0.45em;
+}
+
+.iconRight {
+    top: 0.5em;
+}
+
+@media (max-width: 768px) { 
+    .icon {
+        position: relative;
+    }
+
+    .iconLeft {
+        left: 30%;
+        top: 3.25em;
+    }
+
+    .iconRight {
+        left: 60%;
+        top: 0.75em;
+    }
+}
+
+@media (min-width: 769px) {
+    .iconLeft {
+        left: 1em;
+    }
+
+    .iconRight {
+        right: 0.75em;
+    }
+}

@@ -1,0 +1,13 @@
+.mobileItem {
+    list-style-type: none;
+    padding: 2em;
+}
+
+.mobileItem:nth-child(odd) {
+    background: #F5F5F5;
+}
+
+.mobileList {
+    margin: 0;
+    padding: 0;
+}

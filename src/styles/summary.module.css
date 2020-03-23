@@ -1,0 +1,28 @@
+.container {
+    background: #FDFAFA;
+    border: 1px solid #EFEFEF;
+    border-radius: 0.5em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    padding: 2em;
+}
+
+.row {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+@media (max-width: 768px) {
+    .button {
+        margin-left: 10%;
+        margin-top: 1.5em;
+        width: 80%;
+    }
+}
+
+@media (min-width: 769px) {
+    .button {
+        margin-left: 35%;
+        width: 30%;
+    }
+}
