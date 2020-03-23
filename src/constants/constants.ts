@@ -10,6 +10,6 @@ export const LOADING = 'Loading... Please wait.';
 export const MOBILE_MAX_WIDTH = '768px';
 export const MESSAGE_HEADER_SUCCESS = 'CONGRATULATIONS!';
 export const MESSAGE_HEADER_WARNING = 'WARNING!';
-export const MESSAGE_NO_PRODUCT = 'Add a product to create an invoice';
+export const MESSAGE_NO_PRODUCT = 'Add a product to create a new invoice';
 export const MESSAGE_NO_PRODUCT_ITEM = 'Add an item to create an invoice';
 export const TAX_AMOUNT = 23;

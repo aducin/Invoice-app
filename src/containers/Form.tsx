@@ -52,7 +52,6 @@ class Form extends PureComponent<FormProps, FormState> {
             .catch(() => {
                 this.setState({ error: true, loading: false, message: ERROR_HTTP });
             });
-        // store.dispatch(actions.resetInvoice());
     };
 
     componentWillUnmount() {
@@ -124,6 +123,10 @@ class Form extends PureComponent<FormProps, FormState> {
         this.setState({ error: false, loading: false, message: '', success: false});
     };
 
+    handleRemoveInvoiceData = () => {
+        store.dispatch(actions.resetInvoice());
+    };
+
     render() {
         let invoiceList;
         let message;
@@ -155,18 +158,17 @@ class Form extends PureComponent<FormProps, FormState> {
                     />
                 );
             }
-            let emptyMessage = '';
-
-            if (this.state.loading) {
-                emptyMessage = LOADING;
-            } else if (invoiceData.length) {
-                emptyMessage = MESSAGE_NO_PRODUCT_ITEM;
-            } else {
-                emptyMessage = MESSAGE_NO_PRODUCT;
-            }
+            const message = invoiceData.length ? MESSAGE_NO_PRODUCT_ITEM : MESSAGE_NO_PRODUCT;
             summary = summaryData.products > 0 ?
-                <Summary onInvoiceCreate={this.handleInvoiceCreate} summary={summaryData} /> :
-                <Message allowRemove={false} error={false} message={emptyMessage} success={false} />;
+                <Summary
+                    onInvoiceCreate={this.handleInvoiceCreate}
+                    onInvoiceRemove={this.handleRemoveInvoiceData}
+                    summary={summaryData}
+                    /> :
+                <Message allowRemove={false} error={false} message={message} success={false} />;
+        } else if (!this.state.error) {
+            const message = this.state.loading ? LOADING : MESSAGE_NO_PRODUCT;
+            summary = <Message allowRemove={false} error={false} message={message} success={false} />;
         }
 
         return (

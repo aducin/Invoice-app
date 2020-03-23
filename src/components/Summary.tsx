@@ -3,7 +3,8 @@ import { SummaryProps } from '../types/types';
 import styles from '../styles/summary.module.css';
 
 const Summary: React.FC<SummaryProps> = (props: SummaryProps) => {
-    const buttonClasses = `btn btn-primary ${styles.button}`;
+    const buttonCreateClasses = `btn btn-primary ${styles.button}`;
+    const buttonResetClasses = `btn btn-danger ${styles.button}`;
     const containerClasses = `container ${styles.container}`;
     const rowClasses = `row ${styles.row}`;
     return (
@@ -33,7 +34,18 @@ const Summary: React.FC<SummaryProps> = (props: SummaryProps) => {
                 </div>
             </div>
             <div className="row">
-                <button className={buttonClasses} onClick={() => props.onInvoiceCreate()}>Create invoice</button>
+                <div className="col-xs-12 col-md-6 pull-left">
+                    <button
+                        className={buttonCreateClasses}
+                        onClick={() => props.onInvoiceCreate()}
+                    >Create invoice</button>
+                </div>
+                <div className="col-xs-12 col-md-6 pull-right">
+                    <button
+                        className={buttonResetClasses}
+                        onClick={() => props.onInvoiceRemove()}
+                    >Reset</button>
+                </div>
             </div>
         </div>
     );

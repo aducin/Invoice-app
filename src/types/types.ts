@@ -22,17 +22,6 @@ export type FormState = {
     success: boolean;
 };
 
-export type InvoiceItemDetailsElementProps = {
-    amount?: number;
-    label?: string;
-    mobile: boolean;
-    onAmountChanged?: (amount: number) => void;
-    onRemoved?: () => void;
-    productAmount?: number;
-    remove?: boolean;
-    value?: string;
-}
-
 export type Invoice = {
     _data: InvoiceItem[];
     _summary: Summary;
@@ -44,6 +33,17 @@ export type InvoiceItem = {
     amount: number;
     product: Product;
 };
+
+export type InvoiceItemDetailsElementProps = {
+    amount?: number;
+    label?: string;
+    mobile: boolean;
+    onAmountChanged?: (amount: number) => void;
+    onRemoved?: () => void;
+    productAmount?: number;
+    remove?: boolean;
+    value?: string;
+}
 
 export type InvoiceListProps = {
     list: InvoiceItem[];
@@ -96,4 +96,5 @@ export type Summary = {
 export type SummaryProps = {
     summary: Summary;
     onInvoiceCreate: () => void;
+    onInvoiceRemove: () => void;
 };

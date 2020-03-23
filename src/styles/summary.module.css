@@ -22,7 +22,8 @@
 
 @media (min-width: 769px) {
     .button {
-        margin-left: 35%;
-        width: 30%;
+        margin-left: 25%;
+        margin-top: 5%;
+        width: 50%;
     }
 }
